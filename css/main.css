@@ -1,0 +1,17 @@
+/*----- Header -----*/
+
+header {
+  background-color: lightblue;
+}
+
+.title {
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  text-shadow: 2px 3px 5px black;
+}
+
+.title, .title:visited {
+  color: white;
+}
