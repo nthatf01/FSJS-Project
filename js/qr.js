@@ -1,4 +1,3 @@
-/*----- AJAX for when site is live -----*/
 var questionSet;
 
 var xhr = new XMLHttpRequest();
@@ -8,11 +7,16 @@ xhr.onreadystatechange = function() {
   }
 }
 
-xhr.open("GET", "data/questions.json");
+function randomQuestion(){
+  var randomQuestionNumber = Math.floor(Math.random() * questionSet.length);
+  $(".question").text(questionSet[randomQuestionNumber].question);
+}
+
+xhr.open("GET", "../data/questions.json");
 xhr.send();
 
 $('#startButton').click(function(){
-  $(".question").text("What is the product of 9 x 3?");
   $(this).hide();
   $("#answerBox").css("visibility", "visible");
+  randomQuestion();
 });
