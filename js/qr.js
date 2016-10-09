@@ -18,5 +18,10 @@ xhr.send();
 $('#startButton').click(function(){
   $(this).hide();
   $("#answerBox").css("visibility", "visible");
+  $("#answerButton").css("visibility", "visible");
+  randomQuestion();
+});
+
+$('#answerButton').click(function(){
   randomQuestion();
 });
