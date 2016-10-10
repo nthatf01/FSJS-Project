@@ -19,3 +19,25 @@ header h1 {
 .title, .title:visited {
   color: white;
 }
+
+/*----- Question Box -----*/
+
+.AH {
+  background-color: #eeccff;
+}
+
+.LA {
+  background-color: #ffffcc;
+}
+
+.MA {
+  background-color: #ffdddd;
+}
+
+.SC {
+  background-color: #ddffdd;
+}
+
+.SS {
+  background-color: #ffe67a;
+}
