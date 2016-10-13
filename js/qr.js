@@ -8,17 +8,30 @@ xhr.onreadystatechange = function() {
   }
 }
 
+//Removes all Subject Area classes from the .questionContainer
+function removeSubjectClass(){
+  $(".questionContainer").removeClass("AH LA MA SC SS");
+}
+
+//Adds a Subject Area class to the .questionContainer
+function addSubjectClass(subjectClass){
+  $(".questionContainer").addClass(subjectClass);
+}
+
 function randomQuestion(){
+  //Clear the text currently in the answerBox
+  $("#answerBox").val('');
+
   var randomQuestionNumber = Math.floor(Math.random() * questionSet.length);
   var qSubject = questionSet[randomQuestionNumber].subject;
   totalQuestions++;
   $(".question").text(questionSet[randomQuestionNumber].question);
 
   //Remove current Subject class
-  $(".questionContainer").removeClass("AH LA MA SC SS");
+  removeSubjectClass();
 
   //Add the new Subject class
-  $(".questionContainer").addClass(qSubject);
+  addSubjectClass(qSubject);
 }
 
 function checkAnswer(){
