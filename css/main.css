@@ -27,16 +27,59 @@ header h1 {
 }
 
 .questionContainer {
-  width: 44%;
+  width: 40%;
   margin-left: 4%;
   float: left;
 }
 
+.questionText {
+  padding: 10px;
+  height:400px;
+}
+
+.questionText p {
+  line-height: 22px;
+}
+
 .answeredContainer {
-  width: 44%;
+  width: 48%;
   margin-right: 4%;
   float:right;
 }
+
+.answeredContainer li {
+  list-style: none;
+  margin-bottom: 4px;
+  padding: 10px;
+  line-height: 22px;
+}
+
+.answeredContainer ul {
+  padding: 0;
+}
+
+.answeredWrapper ul {
+  list-style-type: none;
+}
+
+.answeredText {
+  width:84%;
+  float:left;
+}
+
+.answeredCorrect {
+  float:right;
+  width:8%;
+}
+
+.fa-check-circle {
+  color: green;
+}
+
+.fa-times-circle {
+  color: red;
+}
+
 
 #answerBox {
   -webkit-box-sizing: border-box;

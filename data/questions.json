@@ -63,5 +63,45 @@
    "question": "According to the story, he was a Hessian killed by a cannonball during the American Revolution. Brom Bones dresses as him to frighten Ichabod Crane. Identify this figure, who appears in Washington Irving's story 'The Legend of Sleepy Hollow.'",
    "answer": ["THE HEADLESS HORSEMAN", "HEADLESS HORSEMAN"],
    "subject": "LA"
+  },
+  {
+   "question": "Modern versions of this dance attire may closely resemble sneakers, and have a full or partial sole. They might be used for such dances as the jitterbug and the hop. What kind of dance shoe shares its name with a type of American improvisatory music of the twentieth century?",
+   "answer": ["JAZZ SHOES", "JAZZ"],
+   "subject": "AH"
+  },
+  {
+   "question": "The temperatures in this layer of the atmosphere increase as the distance from Earth increases. It is contained in the area some 10 to 30 miles above the Earth's surface. Name this layer which contains the ozone layer.",
+   "answer": ["STRATOSPHERE"],
+   "subject": "SC"
+  },
+  {
+   "question": "A marathon is 26.2 miles long. A cross-country runner has run 19.4 miles today. In miles, how much farther does she have to run to complete a marathon?",
+   "answer": ["6.8", "6.8 MILES"],
+   "subject": "MA"
+  },
+    {
+   "question": "Arlington, Loudoun, and Fairfax Counties can all be found in this Atlantic Coast state. The York and James Rivers are also found here. What state is home to the earliest permanent English settlement, and has its capital at Richmond?",
+   "answer": ["VIRGINIA", "VA"],
+   "subject": "SS"
+  },
+  {
+   "question": "In much the same way that kidneys remove waste from the human body, this part of the cell removes waste from the cell. In what part of the cell do enzymes that break down waste products play a crucial roll?",
+   "answer": ["LYSOSOME", "LYSOSOMES"],
+   "subject": "SC"
+  },
+  {
+   "question": "Characters who die in this play include Polonius, Laertes, and Gertrude. In one scene, the protagonist examines a skull, musing 'Alas, poor Yorick. I knew him, Horatio.' Name this Shakespearean tragedy about a prince of Denmark who wonders 'to be, or not to be; that is the question.'",
+   "answer": ["HAMLET", "HAMLET, PRINCE OF DENMARK", "TRAGEDY OF HAMLET", "TRAGEDY OF HAMLET, PRINCE OF DENMARK", "THE TRAGEDY OF HAMLET", "THE TRAGEDY OF HAMLET, PRINCE OF DENMARK"],
+   "subject": "AH"
+  },
+  {
+   "question": "The meteorologist's weather prediction is ninety percent BLANK. What eight letter word beginning with the letter 'A' is a synonym of 'correct?'",
+   "answer": ["ACCURATE"],
+   "subject": "LA"
+  },
+  {
+   "question": "This literary device is used by a book that refers to a Batman comic or a Shakespearean play. Which figure of speech occurs when an artwork refers to people, places, events, or other artworks?",
+   "answer": ["ALLUSION"],
+   "subject": "LA"
   }
 ]

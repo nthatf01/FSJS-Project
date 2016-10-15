@@ -21,7 +21,8 @@ function questionHandler(){
   var userAnswer = $("#answerBox").val();
 
   //Check Answer
-  if (checkAnswer(userAnswer)) {
+  var userAnswerCheck = checkAnswer(userAnswer);
+  if (userAnswerCheck) {
     console.log("Correct!");
     correctlyAnswered++;
   }
@@ -30,7 +31,7 @@ function questionHandler(){
   updateScore();
 
   //Add answered question to Answered Container
-  addAnsweredQuestion(userAnswer);
+  addAnsweredQuestion(userAnswer, totalQuestions, userAnswerCheck);
 
   //Clear #answerBox
   answerBoxClear();
@@ -50,8 +51,14 @@ function addSubjectClass(subjectClass){
 }
 
 //Add a question to the top of the Answered Questions list
-function addAnsweredQuestion(userAnswer){
-  var answeredHTML = "<li class='" + qSubject + "'>" + currentQuestion + "</li>";
+function addAnsweredQuestion(userAnswer, questionNumber, questionGrade){
+  var answeredIcon;
+  if (questionGrade) {
+    answeredIcon = "<i class='fa fa-check-circle fa-3x' aria-hidden='true'></i>";
+  } else {
+    answeredIcon = "<i class='fa fa-times-circle fa-3x' aria-hidden='true'></i>";
+  }
+  var answeredHTML = "<ul class='answeredWrapper'><li class='answeredText " + qSubject + "'>" + questionNumber + ". " + currentQuestion + "</li><li class='answeredCorrect'>" + answeredIcon + "</li></ul>";
   $(".questionList").prepend(answeredHTML);
 };
 
