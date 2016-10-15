@@ -102,7 +102,7 @@ xhr.send();
 
 $('#startButton').click(function(){
   $(this).hide();
-  $("#answerBox").css("visibility", "visible");
+  $("#answerBox").css("visibility", "visible").focus();
   $("#answerButton").css("visibility", "visible");
   $(".scoreContainer").css("visibility", "visible");
   $(".answeredContainer").css("visibility", "visible");
