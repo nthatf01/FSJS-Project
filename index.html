@@ -16,11 +16,18 @@
         </a>
       </h1>
     </header>
-    <div class="questionContainer">
-      <p class="question">Welcome to Elementary Quick Recall!  Press Start to begin practicing questions!</p>
-      <button type="button" id="startButton">Start!</button>
-      <input type="text" style="visibility: hidden" id="answerBox"></input>
-      <button type="button" style="visibility: hidden" id="answerButton">Submit</button>
+    <div id="mainContainer">
+      <div class="questionContainer">
+        <p class="question">Welcome to Elementary Quick Recall!  Press Start to begin practicing questions!</p>
+        <button type="button" id="startButton">Start!</button>
+        <input type="text" style="visibility: hidden" id="answerBox"></input>
+        <button type="button" style="visibility: hidden" id="answerButton">Submit</button>
+      </div>
+      <div class="answeredContainer" style="visibility: hidden">
+        <h4>Questions Asked</h4>
+        <ul class="questionList">
+        </ul>
+      </div>
     </div>
     <div style="visibility: hidden" class="scoreContainer">
       <p class="score"></p>

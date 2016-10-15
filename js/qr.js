@@ -1,6 +1,7 @@
 var questionSet;
 var currentQuestion;
 var qAnswer;
+var qSubject;
 var totalQuestions = 0;
 var correctlyAnswered = 0;
 
@@ -28,6 +29,9 @@ function questionHandler(){
   //Update Score
   updateScore();
 
+  //Add answered question to Answered Container
+  addAnsweredQuestion(userAnswer);
+
   //Clear #answerBox
   answerBoxClear();
 
@@ -45,6 +49,12 @@ function addSubjectClass(subjectClass){
   $(".questionContainer").addClass(subjectClass);
 }
 
+//Add a question to the top of the Answered Questions list
+function addAnsweredQuestion(userAnswer){
+  var answeredHTML = "<li class='" + qSubject + "'>" + currentQuestion + "</li>";
+  $(".questionList").prepend(answeredHTML);
+};
+
 //Clear the  text in the #answerBox
 function answerBoxClear(){
   $("#answerBox").val('');
@@ -52,14 +62,15 @@ function answerBoxClear(){
 
 //Update the .score text
 function updateScore(){
-  $(".score").text(correctlyAnswered + " / " + totalQuestions);
+  $(".score").text(correctlyAnswered + " / " + totalQuestions + " : " + Math.round(((correctlyAnswered/totalQuestions) * 100)) + "%");
 }
 
 function randomQuestion(){
   var randomQuestionNumber = Math.floor(Math.random() * questionSet.length);
   qAnswer = questionSet[randomQuestionNumber].answer;
-  var qSubject = questionSet[randomQuestionNumber].subject;
-  $(".question").text(questionSet[randomQuestionNumber].question);
+  qSubject = questionSet[randomQuestionNumber].subject;
+  currentQuestion = questionSet[randomQuestionNumber].question;
+  $(".question").text(currentQuestion);
 
   //Remove current Subject class
   removeSubjectClass();
@@ -68,6 +79,7 @@ function randomQuestion(){
   addSubjectClass(qSubject);
 }
 
+//Check to see if the user's answer is correct
 function checkAnswer(userAnswer){
   var correctAnswer = false;
   for(i = 0; i < qAnswer.length; i++) {
@@ -86,8 +98,10 @@ $('#startButton').click(function(){
   $("#answerBox").css("visibility", "visible");
   $("#answerButton").css("visibility", "visible");
   $(".scoreContainer").css("visibility", "visible");
+  $(".answeredContainer").css("visibility", "visible");
   randomQuestion();
 });
+
 
 $('#answerButton').click(function(){
   questionHandler();

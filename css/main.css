@@ -22,6 +22,37 @@ header h1 {
 
 /*----- Question Box -----*/
 
+#mainContainer {
+  width: 100%;
+}
+
+.questionContainer {
+  width: 44%;
+  margin-left: 4%;
+  float: left;
+}
+
+.answeredContainer {
+  width: 44%;
+  margin-right: 4%;
+  float:right;
+}
+
+#answerBox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width:100%;
+}
+
+#answerButton {
+  width: 100%;
+}
+
+#answerBox:focus {
+  outline:none;
+}
+
 .AH {
   background-color: #eeccff;
 }
