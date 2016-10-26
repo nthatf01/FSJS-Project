@@ -4,6 +4,7 @@ var qAnswer;
 var qSubject;
 var totalQuestions = 0;
 var correctlyAnswered = 0;
+var hideCorrectAnswersToggle = false;
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
@@ -36,6 +37,9 @@ function questionHandler(){
   //Clear #answerBox
   answerBoxClear();
 
+  //Give Focus to #answerBox
+  $("#answerBox").focus();
+
   //Generate new Random Question
   randomQuestion();
 }
@@ -53,13 +57,19 @@ function addSubjectClass(subjectClass){
 //Add a question to the top of the Answered Questions list
 function addAnsweredQuestion(userAnswer, questionNumber, questionGrade){
   var answeredIcon;
+  var answerCorrectClass;
   if (questionGrade) {
     answeredIcon = "<i class='fa fa-check-circle fa-3x' aria-hidden='true'></i>";
+    answerCorrectClass = "answeredCorrectly'>";
   } else {
     answeredIcon = "<i class='fa fa-times-circle fa-3x' aria-hidden='true'></i>";
+    answerCorrectClass = "'>";
   }
-  var answeredHTML = "<ul class='answeredWrapper'><li class='answeredText " + qSubject + "'>" + questionNumber + ". " + currentQuestion + "</li><li class='answeredCorrect'>" + answeredIcon + "</li></ul>";
+  var answeredHTML = "<ul class='answeredWrapper " + answerCorrectClass + "<li class='answeredText " + qSubject + "'>" + questionNumber + ". " + currentQuestion + "</li><li class='answeredCorrect'>" + answeredIcon + "</li></ul>";
   $(".questionList").prepend(answeredHTML);
+  if(hideCorrectAnswersToggle){
+    $(".answeredCorrectly").hide();
+  }
 };
 
 //Clear the  text in the #answerBox
@@ -118,4 +128,14 @@ $('#answerBox').bind('keyup', function(e) {
     if ( e.keyCode === 13 ) { // 13 is enter key
       questionHandler();
     }
+});
+
+$('.hideCorrectCheckbox').click(function(){
+  if(hideCorrectAnswersToggle === false) {
+    $('.answeredCorrectly').hide();
+    hideCorrectAnswersToggle = true;
+  } else {
+    $('.answeredCorrectly').show();
+    hideCorrectAnswersToggle = false;
+  }
 });
