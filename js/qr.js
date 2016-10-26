@@ -133,9 +133,11 @@ $('#answerBox').bind('keyup', function(e) {
 $('.hideCorrectCheckbox').click(function(){
   if(hideCorrectAnswersToggle === false) {
     $('.answeredCorrectly').hide();
+    $('#answeredContainerH3').text("Incorrect Answers");
     hideCorrectAnswersToggle = true;
   } else {
     $('.answeredCorrectly').show();
+    $('#answeredContainerH3').text("Questions Asked");
     hideCorrectAnswersToggle = false;
   }
 });
