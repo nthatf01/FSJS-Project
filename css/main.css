@@ -2,10 +2,15 @@
 
 header {
   background-color: lightblue;
+  height: 200px;
+  background: linear-gradient(rgba(150, 200, 256, .5), transparent 90%), linear-gradient(0deg, white, transparent);
+  background-size: cover;
 }
 
 header h1 {
   margin: 0;
+  padding-top: 10px;
+  font-size: 2.0em;
 }
 
 .title {
@@ -28,9 +33,7 @@ header h1 {
 }
 
 .questionContainer {
-  width: 40%;
-  margin-left: 4%;
-  float: left;
+
 }
 
 .questionText {
@@ -43,14 +46,12 @@ header h1 {
 }
 
 .answeredContainer {
-  width: 48%;
-  margin-right: 4%;
-  float:right;
+  float: none;
 }
 
 .answeredContainer li {
   list-style: none;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   padding: 10px;
   line-height: 22px;
 }
@@ -66,6 +67,7 @@ header h1 {
 .answeredText {
   width:84%;
   float:left;
+  box-shadow: 2px 3px 5px black;
 }
 
 .answeredCorrect {
@@ -90,6 +92,8 @@ header h1 {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width:100%;
+  height: 48px;
+  font-size: 32px;
 }
 
 #answerButton {
@@ -181,4 +185,43 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/*----- Responsive Design -----*/
+
+@media (min-width: 600px) {
+  header {
+    background: linear-gradient(rgba(150, 200, 256, .5), transparent 90%), linear-gradient(0deg, white, transparent), url('../images/banner.jpg') no-repeat center;
+    background-size:cover;
+  }
+}
+
+@media (min-width: 668px) {
+  header h1 {
+    padding-top: 25px;
+  }
+}
+
+/*----- Reduce Header H1 Font Size w/ Smaller Window -----*/
+@media (min-width: 1200px) {
+  header h1 {
+    padding-top: 15px;
+    font-size: 2.5em;
+  }
+}
+
+/*----- Move Answered Questions under active question on smaller screens -----*/
+
+@media (min-width: 1060px) {
+  .answeredContainer {
+    width: 48%;
+    margin-right: 4%;
+    float:right;
+  }
+
+  .questionContainer {
+    width: 40%;
+    margin-left: 4%;
+    float: left;
+  }
 }

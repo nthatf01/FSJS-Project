@@ -119,6 +119,7 @@ $('#startButton').click(function(){
   randomQuestion();
 });
 
+/*----- When user clicks answer button or presses Enter -----*/
 
 $('#answerButton').click(function(){
   questionHandler();
@@ -129,6 +130,8 @@ $('#answerBox').bind('keyup', function(e) {
       questionHandler();
     }
 });
+
+/*----- Slide Toggle Checkbox functionality -----*/
 
 $('.hideCorrectCheckbox').click(function(){
   if(hideCorrectAnswersToggle === false) {
