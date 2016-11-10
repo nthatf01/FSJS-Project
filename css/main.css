@@ -191,7 +191,7 @@ input:checked + .slider:before {
 
 @media (min-width: 600px) {
   header {
-    background: linear-gradient(rgba(150, 200, 256, .5), transparent 90%), linear-gradient(0deg, white, transparent), url('../images/banner.jpg') no-repeat center;
+    background: linear-gradient(rgba(150, 200, 256, .5), transparent 90%), linear-gradient(0deg, white, transparent), url('../public/images/banner.jpg') no-repeat center;
     background-size:cover;
   }
 }

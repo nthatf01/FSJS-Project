@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Brandeis Quick Recall
+    link(href='/images/icon_knowledge.png', rel='icon', type='image/png')
+    link(href='/css/normalize.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='css/main.css', type='text/css')
+  body
+    header
+      h1
+        a.title(href='index.html')
+          h1 Brandeis Quick Recall
+    .scoreContainer(style='visibility: hidden')
+      p.score
+    #mainContainer
+      .questionContainer
+        .questionText
+          p.question Welcome to Elementary Quick Recall!  Press Start to begin practicing questions!
+        button#startButton(type='button') Start!
+        input#answerBox(type='text', style='visibility: hidden')
+        button#answerButton(type='button', style='visibility: hidden') Submit
+      .answeredContainer(style='visibility: hidden')
+        label.switch
+          input.hideCorrectCheckbox(type='checkbox')
+          .slider.round
+        h3#answeredContainerH3 Questions Asked
+        ul.questionList
+    script(src='http://code.jquery.com/jquery-3.1.1.js', integrity='sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=', crossorigin='anonymous')
+    script(src='https://use.fontawesome.com/9afd57290f.js')
+    script(src='js/qr.js')
