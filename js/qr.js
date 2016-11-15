@@ -1,3 +1,9 @@
+'use strict';
+
+var angular = require('angular');
+
+angular.module('qrQuestionApp', []);
+
 var questionSet;
 var currentQuestion;
 var qAnswer;
